@@ -1,3 +1,4 @@
+# contoh data yang akan dipakai
 dataBarang = [
     {
         "nama": "sunlight",
