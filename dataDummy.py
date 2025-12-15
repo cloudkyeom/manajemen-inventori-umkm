@@ -1,0 +1,19 @@
+dataBarang = []
+
+#     {
+#        "nama": "sunlight",
+#        "kode": 11234,
+#         "jumlah": 10,
+#         "expired": "2028-09-30",
+#         "kondisi": "bagus, tidak ada cacat",
+#         "kategori": "soap"
+#     },
+#    {
+#        "nama": "susu",
+#        "kode": 22345,
+#        "jumlah": 5,
+#        "expired": "2025-01-10",
+#        "kondisi": "baik"
+#        "kategori": "dairy"
+#     }
+# ]
