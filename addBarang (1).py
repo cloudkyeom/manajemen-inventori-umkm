@@ -1,18 +1,13 @@
 # primanisaa: perubahan nama file dari laporan_stock1.py -> addBarang.py
 
-<<<<<<< HEAD
 import dataDummy #Primanisaa: import data dari dummy
 from datetime import datetime, timedelta #Apuila : import format kalender
 import os
 
-=======
-from dataDummy import dataBarang #Primanisaa: import data dari dummy
->>>>>>> b90a6f030a0f85b21c093b4606d773f0a1ad3af8
 def tambah_barang():
     print("\n===== TAMBAH BARANG =====")
     nama    = input("Masukkan nama barang: ")
     kode    = input("Masukkan kode barang: ")
-<<<<<<< HEAD
 
     while True: #Apuila: mengubah agar program melakukan looping ketika inputnya bukan angka
         try:
@@ -28,22 +23,22 @@ def tambah_barang():
             today = datetime.today() # primanisaa: menetapkan data untuk tanggal hari ini
             tomorrow = today + timedelta(days=1) # primanisaa: menetapkan data untuk tanggal hari ini
             if data <= tomorrow : # primanisaa: apabila expired bsk maka masuk ke gudang prioritas
-                print("\nBarang akan dimasukkan ke gudang prioritas")
+                print("masuk gudang prioritas")
             else:
-                print("\nBarang akan dimasukkan ke gudang umum.")
+                print("masuk gudang")
             break
         except ValueError:
             print("Format tanggal salah. Benerin formatnya.")
     
     #Apuila : mengubah validasi kondisi barang ke boolean
     while True:
-        kondisi_input = input("\nApakah barang rusak (penyok, berbau, berubah warna, kemasan terbuka)? (ya/tidak): ").lower()
+        kondisi_input = input("Apakah barang rusak (penyok, berbau, berubah warna, kemasan terbuka)? (ya/tidak): ").lower()
         if kondisi_input == "ya":
-            kondisi = "Rusak"
+            kondisi = "rusak"
             kategori = "Reject"
             break
         elif kondisi_input == "tidak":
-            kondisi = "Normal/bagus"
+            kondisi = "normal/bagus"
             kategori = "Gudang Umum"
             break
         else:
@@ -53,25 +48,6 @@ def tambah_barang():
     # Primanisaa: perubahan sedikit pada var data_barang -> dataBarang menyesuaikan dummy 
 
     dataDummy.dataBarang.append({
-=======
-    jumlah  = int(input("Masukkan jumlah barang: "))
-    expired = input("Masukkan tanggal expired: ")
-    print("\nKondisi barang: rusak/ penyok/ kemasan terbuka/ bau/ berubah warna")
-    kondisi = input("Masukkan kondisi barang: ").lower()
-
-    # Cek kondisi barang
-    if kondisi in ["rusak", "penyok", "kemasan terbuka", "bau", "berubah warna"]:
-        kategori = "Reject"
-        print("Barang Reject")
-    else:
-        kategori = "Gudang Umum"
-        print("Barang masuk ke gudang umum")
-
-    # Tambahkan ke daftar barang
-    # Primanisaa: perubahan sedikit pada var data_barang -> dataBarang menyesuaikan dummy 
-
-    dataBarang.append({
->>>>>>> b90a6f030a0f85b21c093b4606d773f0a1ad3af8
         "nama": nama,
         "kode": kode,
         "jumlah": jumlah,
@@ -79,7 +55,6 @@ def tambah_barang():
         "kondisi": kondisi,
         "kategori": kategori
     })
-<<<<<<< HEAD
 
     os.system('cls' if os.name == 'nt' else 'clear')
     #dataBarang.append(dataBarang[-1].copy()) 
@@ -95,10 +70,5 @@ def tambah_barang():
     input("Tekan ENTER untuk kembali ke menu utama...") #Apuila: menambahkan opsi kembali ke menu utama
     os.system('cls' if os.name == 'nt' else 'clear') #Apuila: Membersihkan tampilan
     return
-=======
-    dataBarang.append(dataBarang[-1].copy()) 
-
-    print("Barang berhasil ditambahkan!\n")
->>>>>>> b90a6f030a0f85b21c093b4606d773f0a1ad3af8
 
 # made by zahra aulia
